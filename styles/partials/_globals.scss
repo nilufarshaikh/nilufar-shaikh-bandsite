@@ -1,11 +1,10 @@
 @use "./typography";
 @use "./variables" as *;
 
-body {
+* {
   margin: 0;
   padding: 0;
-  // font-family: "Avenir Regular", sans-serif;
-  font-family: sans-serif;
+  font-family: $font-regular;
   font-weight: 400;
 }
 
@@ -15,15 +14,20 @@ body {
 }
 
 .logo {
-  padding: 16px;
+  padding: 1rem;
 
   &__link {
     text-decoration: none;
   }
 
   &__image {
-    width: 120px;
-    height: 20px;
+    width: 7.5rem;
+    height: 1.25rem;
+  }
+
+  &--footer {
+    padding-left: 0;
+    padding-top: 3rem;
   }
 }
 
@@ -39,19 +43,64 @@ body {
     color: $secondary-color-2;
     list-style: none;
     width: 50%;
-    padding-bottom: 16px;
-    font-size: 16px;
-    line-height: 24px;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
 
     &--active {
-      border-bottom: 3px solid $primary-color-3;
+      border-bottom: 0.25rem solid $primary-color-3;
       color: $primary-color-3;
       font-weight: 700;
     }
 
     &:hover {
-      border-bottom: 3px solid $primary-color-3;
+      border-bottom: 0.25rem solid $primary-color-3;
       color: $primary-color-3;
     }
   }
+}
+
+.footer {
+  background-color: $primary-color-1;
+  color: $secondary-color-2;
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+
+.socials {
+  &__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+  }
+
+  &__link {
+    padding-right: 1.5rem;
+  }
+}
+
+.address {
+  padding-top: 1.5rem;
+  &__title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-bottom: 16px;
+  }
+
+  &__info {
+    font-size: 0.8rem;
+    line-height: 1.1125rem;
+    font-weight: 400;
+
+    &--email {
+      padding-top: 1rem;
+    }
+  }
+}
+
+.copyright {
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  padding-bottom: 1rem;
 }
