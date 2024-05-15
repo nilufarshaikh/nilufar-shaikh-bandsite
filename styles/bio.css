@@ -29,12 +29,12 @@
   text-decoration: none;
 }
 .logo__image {
-  width: 7.5rem;
-  height: 1.25rem;
+  width: 120px;
+  height: 20px;
 }
 .logo--footer {
   padding-left: 0;
-  padding-top: 3rem;
+  padding-top: 1.5rem;
 }
 
 .nav__list {
@@ -47,7 +47,7 @@
   color: #e1e1e1;
   list-style: none;
   width: 50%;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
 }
@@ -63,7 +63,7 @@
 
 .footer {
   background-color: #323232;
-  color: #e1e1e1;
+  color: #ffffff;
   padding: 1.5rem 1rem 1rem 1rem;
 }
 
@@ -80,14 +80,19 @@
 .address {
   padding-top: 1.5rem;
 }
+.address--spacing {
+  padding-bottom: 1rem;
+}
 .address__title {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
-  padding-bottom: 16px;
+  font-family: "Avenir Demi", sans-serif;
+  padding-bottom: 1rem;
 }
 .address__info {
-  font-size: 0.8rem;
-  line-height: 1.1125rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-weight: 400;
 }
 .address__info--email {
@@ -95,8 +100,37 @@
 }
 
 .copyright {
-  font-size: 0.8rem;
-  line-height: 1.25rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-weight: 400;
   padding-bottom: 1rem;
+}
+
+.hero {
+  position: relative;
+}
+.hero__wrapper {
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 60vw;
+}
+.hero__overlay {
+  width: 100%;
+  height: 60vw;
+  background-color: rgba(50, 50, 50, 0.5);
+  position: absolute;
+  z-index: 1;
+}
+.hero__title {
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  top: 30%;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  padding: 1rem;
 }/*# sourceMappingURL=bio.css.map */

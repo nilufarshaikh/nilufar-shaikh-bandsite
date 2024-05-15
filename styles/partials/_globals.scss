@@ -21,13 +21,14 @@
   }
 
   &__image {
-    width: 7.5rem;
-    height: 1.25rem;
+    //Need to ask if to be kept in px or rem
+    width: 120px;
+    height: 20px;
   }
 
   &--footer {
     padding-left: 0;
-    padding-top: 3rem;
+    padding-top: 1.5rem;
   }
 }
 
@@ -43,7 +44,7 @@
     color: $secondary-color-2;
     list-style: none;
     width: 50%;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     font-size: 1rem;
     line-height: 1.5rem;
 
@@ -62,12 +63,13 @@
 
 .footer {
   background-color: $primary-color-1;
-  color: $secondary-color-2;
+  color: $primary-color-3;
   padding: 1.5rem 1rem 1rem 1rem;
 }
 
 .socials {
   &__title {
+    // Section header
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
@@ -81,15 +83,23 @@
 
 .address {
   padding-top: 1.5rem;
+
+  &--spacing {
+    padding-bottom: 1rem;
+  }
+
   &__title {
-    font-size: 0.9rem;
+    // Subheader
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 600;
-    padding-bottom: 16px;
+    font-family: $font-demi;
+    padding-bottom: 1rem;
   }
 
   &__info {
-    font-size: 0.8rem;
-    line-height: 1.1125rem;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
     font-weight: 400;
 
     &--email {
@@ -99,8 +109,8 @@
 }
 
 .copyright {
-  font-size: 0.8rem;
-  line-height: 1.25rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   font-weight: 400;
   padding-bottom: 1rem;
 }
