@@ -8,6 +8,25 @@
   font-weight: 400;
 }
 
+h1,
+h2 {
+  font-family: $font-demi;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+h3 {
+  font-family: $font-demi;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+p {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
 .header {
   background-color: $primary-color-1;
   text-align: center;
@@ -21,9 +40,8 @@
   }
 
   &__image {
-    //Need to ask if to be kept in px or rem
-    width: 120px;
-    height: 20px;
+    width: 7.5rem;
+    height: 1.25rem;
   }
 
   &--footer {
@@ -45,13 +63,15 @@
     list-style: none;
     width: 50%;
     padding-bottom: 0.5rem;
-    font-size: 1rem;
+    font-family: $font-regular;
+    font-size: 0.9rem;
     line-height: 1.5rem;
+    font-weight: 400;
 
     &--active {
       border-bottom: 0.25rem solid $primary-color-3;
       color: $primary-color-3;
-      font-weight: 700;
+      font-family: $font-demi;
     }
 
     &:hover {
@@ -69,10 +89,6 @@
 
 .socials {
   &__title {
-    // Section header
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
     padding-bottom: 1rem;
   }
 
@@ -89,19 +105,10 @@
   }
 
   &__title {
-    // Subheader
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 600;
-    font-family: $font-demi;
     padding-bottom: 1rem;
   }
 
   &__info {
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    font-weight: 400;
-
     &--email {
       padding-top: 1rem;
     }
@@ -109,8 +116,5 @@
 }
 
 .copyright {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
   padding-bottom: 1rem;
 }
