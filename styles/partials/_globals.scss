@@ -1,5 +1,8 @@
-@use "./typography";
+@use "./typography" as *;
 @use "./variables" as *;
+@use "./mixins" as *;
+
+// Put wrapper to nav items and do the border underline thing
 
 * {
   margin: 0;
@@ -8,32 +11,88 @@
   font-weight: 400;
 }
 
-h1,
+h1 {
+  font-family: $font-demi;
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  @include tablet {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+}
+
 h2 {
   font-family: $font-demi;
   font-size: 1.5rem;
   line-height: 2rem;
+
+  @include tablet {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
 }
 
 h3 {
   font-family: $font-demi;
   font-size: 0.875rem;
   line-height: 1.375rem;
+
+  @include tablet {
+    font-size: 1.3438rem;
+    line-height: 2rem;
+  }
+}
+
+h4 {
+  font-family: $font-demi;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+
+  @include tablet {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
+h5 {
+  font-family: $font-demi;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+
+  @include tablet {
+    font-size: 0.9rem;
+    line-height: 2rem;
+  }
 }
 
 p {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-weight: 400;
+
+  @include tablet {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 
 .header {
   background-color: $primary-color-1;
   text-align: center;
+
+  @include tablet {
+    align-items: center;
+    padding: 0.5rem 1.25rem 0 1.25rem;
+    display: flex;
+  }
 }
 
 .logo {
   padding: 1rem;
+
+  @include tablet {
+    padding-right: 3.5rem;
+  }
 
   &__link {
     text-decoration: none;
@@ -47,6 +106,12 @@ p {
   &--footer {
     padding-left: 0;
     padding-top: 1.5rem;
+
+    @include tablet {
+      position: absolute;
+      top: 2.1875rem;
+      right: 0;
+    }
   }
 }
 
@@ -56,6 +121,10 @@ p {
     flex-direction: row;
     padding: 0;
     margin: 0;
+
+    @include tablet {
+      gap: 3rem;
+    }
   }
 
   &__item {
@@ -66,17 +135,28 @@ p {
     font-family: $font-regular;
     font-size: 0.9rem;
     line-height: 1.5rem;
-    font-weight: 400;
+
+    @include tablet {
+      padding: 1rem 0;
+    }
 
     &--active {
-      border-bottom: 0.25rem solid $primary-color-3;
+      border-bottom: 3px solid $primary-color-3;
       color: $primary-color-3;
       font-family: $font-demi;
+
+      @include tablet {
+        border-bottom: 0.2188rem solid $primary-color-3;
+      }
     }
 
     &:hover {
-      border-bottom: 0.25rem solid $primary-color-3;
+      border-bottom: 3px solid $primary-color-3;
       color: $primary-color-3;
+
+      @include tablet {
+        border-bottom: 0.2188rem solid $primary-color-3;
+      }
     }
   }
 }
@@ -85,15 +165,40 @@ p {
   background-color: $primary-color-1;
   color: $primary-color-3;
   padding: 1.5rem 1rem 1rem 1rem;
+
+  @include tablet {
+    position: relative;
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
 }
 
 .socials {
+  @include tablet {
+    display: flex;
+    align-items: baseline;
+  }
+
   &__title {
     padding-bottom: 1rem;
+
+    @include tablet {
+      padding-right: 2rem;
+    }
   }
 
   &__link {
     padding-right: 1.5rem;
+
+    @include tablet {
+      padding-right: 1.5rem;
+    }
+  }
+}
+
+.address-wrapper {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -111,10 +216,15 @@ p {
   &__info {
     &--email {
       padding-top: 1rem;
+
+      @include tablet {
+        padding-top: 1.5rem;
+      }
     }
   }
 }
 
 .copyright {
   padding-bottom: 1rem;
+  padding-top: 1.5rem;
 }

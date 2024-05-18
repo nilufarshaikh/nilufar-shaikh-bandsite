@@ -1,5 +1,6 @@
 @use "./partials/globals" as *;
 @use "./partials/variables" as *;
+@use "./partials/mixins" as *;
 
 .hero {
   position: relative;
@@ -29,6 +30,10 @@
     z-index: 1;
     padding: 1rem;
     color: $primary-color-3;
+
+    @include tablet {
+      padding: 2.25rem;
+    }
   }
 }
 
@@ -36,12 +41,31 @@
   color: $primary-color-1;
   padding: 1.5rem 1rem 1rem 1rem;
 
+  @include tablet {
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+
+  &__body-wrapper {
+    @include tablet {
+      display: flex;
+      gap: 1.5rem;
+    }
+  }
+
   &__title {
     padding-bottom: 0.5rem;
+
+    @include tablet {
+      padding-bottom: 1.5rem;
+    }
   }
 
   &__highlight {
     overflow: hidden;
+
+    @include tablet {
+      margin: 0 3.75rem;
+    }
   }
 
   &__image {
@@ -50,8 +74,22 @@
     width: 100%;
   }
 
+  &__subtitle {
+    font-size: 1.4688rem;
+  }
+
   &__author {
     padding: 0.5rem 0 1rem 0;
+
+    @include tablet {
+      padding: 0.5rem 0 2rem 0;
+    }
+  }
+
+  &__story {
+    @include tablet {
+      margin: 0 3.75rem;
+    }
   }
 
   &__body {
@@ -63,15 +101,31 @@
   background-color: $secondary-color-3;
   padding: 1.5rem 1rem 0 1rem;
 
+  @include tablet {
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+
   &__images {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__image-wrapper {
+    @include tablet {
+      width: 31%;
+    }
   }
 
   &__title {
     color: $primary-color-1;
-    padding-bottom: 0.6rem;
+    padding-bottom: 1.5rem;
   }
 
   &__image {
