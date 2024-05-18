@@ -2,8 +2,6 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-// Put wrapper to nav items and do the border underline thing
-
 * {
   margin: 0;
   padding: 0;
@@ -96,10 +94,6 @@ p {
 
   @include tablet {
     padding-right: 3.5rem;
-  }
-
-  @include desktop {
-    // padding-bottom: 1.5rem;
   }
 
   &__link {
