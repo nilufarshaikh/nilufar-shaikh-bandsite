@@ -28,11 +28,15 @@
   &__title {
     position: relative;
     z-index: 1;
-    padding: 1rem;
+    padding-left: 1rem;
     color: $primary-color-3;
 
     @include tablet {
-      padding: 2.25rem;
+      padding-left: 2.25rem;
+    }
+
+    @include desktop {
+      padding-left: 8rem;
     }
   }
 }
@@ -43,6 +47,11 @@
 
   @include tablet {
     padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+
+  @include desktop {
+    padding-right: 8rem;
+    padding-left: 8rem;
   }
 
   &__body-wrapper {
@@ -66,16 +75,32 @@
     @include tablet {
       margin: 0 3.75rem;
     }
+
+    @include desktop {
+      margin: 0 5.5rem;
+    }
   }
 
   &__image {
     margin-top: -16%;
     padding: 1rem 0 0.5rem 0;
     width: 100%;
+
+    @include desktop {
+      margin-top: -10%;
+    }
   }
 
   &__subtitle {
-    font-size: 1.4688rem;
+    @include tablet {
+      font-size: 1.4688rem;
+    }
+
+    @include desktop {
+      font-size: 1.4rem;
+      width: 79%;
+      padding-top: 1.5rem;
+    }
   }
 
   &__author {
@@ -90,6 +115,10 @@
     @include tablet {
       margin: 0 3.75rem;
     }
+
+    @include desktop {
+      margin: 0 5.5rem;
+    }
   }
 
   &__body {
@@ -103,6 +132,11 @@
 
   @include tablet {
     padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+
+  @include desktop {
+    padding-right: 8rem;
+    padding-left: 8rem;
   }
 
   &__images {
@@ -120,6 +154,10 @@
   &__image-wrapper {
     @include tablet {
       width: 31%;
+    }
+
+    @include desktop {
+      width: 32%;
     }
   }
 
