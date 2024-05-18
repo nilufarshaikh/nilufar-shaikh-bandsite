@@ -7,7 +7,8 @@
 
   &__wrapper {
     width: 100%;
-    height: 60vw;
+    height: calc(100vw * 9 / 16);
+    aspect-ratio: 4 / 3;
     display: flex;
     justify-content: normal;
     align-items: center;
@@ -19,7 +20,8 @@
 
   &__overlay {
     width: 100%;
-    height: 60vw;
+    height: calc(100vw * 9 / 16);
+    aspect-ratio: 4 / 3;
     background-color: $overlay-color;
     position: absolute;
     z-index: 1;
