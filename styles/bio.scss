@@ -8,7 +8,6 @@
   &__wrapper {
     width: 100%;
     height: calc(100vw * 9 / 16);
-    aspect-ratio: 4 / 3;
     display: flex;
     justify-content: normal;
     align-items: center;
@@ -16,12 +15,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
+    z-index: 0;
   }
 
   &__overlay {
     width: 100%;
     height: calc(100vw * 9 / 16);
-    aspect-ratio: 4 / 3;
     background-color: $overlay-color;
     position: absolute;
     z-index: 1;
@@ -29,7 +28,7 @@
 
   &__title {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     padding-left: 1rem;
     color: $primary-color-3;
 
@@ -45,30 +44,20 @@
 
 .about {
   color: $primary-color-1;
-  padding: 1.5rem 1rem 1rem 1rem;
-
-  @include tablet {
-    padding: 3rem 2.25rem 2.25rem 2.25rem;
-  }
-
-  @include desktop {
-    padding-right: 8rem;
-    padding-left: 8rem;
-  }
 
   &__body-wrapper {
     @include tablet {
       display: flex;
       gap: 1.5rem;
     }
+
+    @include desktop {
+      gap: 2rem;
+    }
   }
 
   &__title {
-    padding-bottom: 0.5rem;
-
-    @include tablet {
-      padding-bottom: 1.5rem;
-    }
+    @include page_titles($primary-color-1);
   }
 
   &__highlight {
@@ -84,9 +73,14 @@
   }
 
   &__image {
-    margin-top: -16%;
-    padding: 1rem 0 0.5rem 0;
     width: 100%;
+    margin-top: -16%;
+    padding-bottom: 1rem;
+
+    @include tablet {
+      margin-top: -12%;
+      padding-bottom: 1.5rem;
+    }
 
     @include desktop {
       margin-top: -10%;
@@ -95,21 +89,22 @@
 
   &__subtitle {
     @include tablet {
-      font-size: 1.4688rem;
+      font-size: 1.4rem;
     }
 
     @include desktop {
-      font-size: 1.4rem;
       width: 79%;
-      padding-top: 1.5rem;
+      padding-top: 0.5rem;
     }
   }
 
   &__author {
     padding: 0.5rem 0 1rem 0;
+    font-size: 0.78rem;
 
     @include tablet {
       padding: 0.5rem 0 2rem 0;
+      font-size: 1rem;
     }
   }
 
@@ -130,28 +125,22 @@
 
 .gallery {
   background-color: $secondary-color-3;
-  padding: 1.5rem 1rem 0 1rem;
 
-  @include tablet {
-    padding: 3rem 2.25rem 2.25rem 2.25rem;
-  }
-
-  @include desktop {
-    padding-right: 8rem;
-    padding-left: 8rem;
+  &__title {
+    @include page_titles($primary-color-1);
   }
 
   &__images {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-    padding-bottom: 1rem;
+    gap: 0.7rem;
 
     @include tablet {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
       padding-bottom: 0;
+      gap: 1rem;
     }
   }
 
@@ -163,11 +152,6 @@
     @include desktop {
       width: 32%;
     }
-  }
-
-  &__title {
-    color: $primary-color-1;
-    padding-bottom: 1.5rem;
   }
 
   &__image {

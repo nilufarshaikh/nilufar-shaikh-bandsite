@@ -1,3 +1,17 @@
+@mixin page_titles($color) {
+  color: $color;
+  padding-bottom: 1rem;
+
+  @include tablet {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@mixin navigation_style($border-size, $border-color, $text-color) {
+  border-bottom: $border-size solid $border-color;
+  color: $text-color;
+}
+
 @mixin tablet {
   @media screen and (min-width: 768px) {
     @content;
