@@ -111,12 +111,11 @@ a {
 
     @include tablet {
       position: absolute;
-      top: 3.8rem;
+      top: 2.2rem;
       right: 2.25rem;
     }
 
     @include desktop {
-      top: 2.2rem;
       right: 8rem;
     }
   }

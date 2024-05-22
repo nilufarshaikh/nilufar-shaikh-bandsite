@@ -134,13 +134,12 @@ a {
 @media screen and (min-width: 768px) {
   .logo--footer {
     position: absolute;
-    top: 3.8rem;
+    top: 2.2rem;
     right: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .logo--footer {
-    top: 2.2rem;
     right: 8rem;
   }
 }
