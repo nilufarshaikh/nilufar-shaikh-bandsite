@@ -79,22 +79,22 @@ a {
 }
 
 button {
-  height: 40px;
+  height: 2.5rem;
   width: 100%;
   background-color: #323232;
   color: #ffffff;
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   font-family: "Avenir Demi", sans-serif;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   button {
-    width: 150px;
-    padding: 0 32px;
-    font-size: 13px;
+    width: 9.375rem;
+    padding: 0 2rem;
+    font-size: 0.8125rem;
   }
 }
 button:hover {
@@ -103,30 +103,32 @@ button:hover {
 
 label {
   color: #afafaf;
-  font-size: 10px;
-  line-height: 20px;
-  margin-bottom: 4px;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.25rem;
 }
 @media screen and (min-width: 768px) {
   label {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
 }
 
 input,
 textarea {
   background-color: #fafafa;
-  margin-bottom: 16px;
-  padding: 12px;
-  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
   border: 1px solid #e1e1e1;
   outline: none;
+  resize: none;
 }
 @media screen and (min-width: 768px) {
   input,
   textarea {
-    padding: 16px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
@@ -150,12 +152,12 @@ hr {
 }
 @media screen and (min-width: 768px) {
   hr {
-    margin: 1rem 3.75rem;
+    margin: 1.5rem 3.75rem;
   }
 }
 @media screen and (min-width: 1280px) {
   hr {
-    margin: 1rem 16rem;
+    margin: 1.5rem 16rem;
   }
 }
 
@@ -540,29 +542,6 @@ hr {
     margin: 0 16rem;
   }
 }
-.comments-form__avatar {
-  width: 36px;
-  height: 36px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-top: 24px;
-  background-color: #e1e1e1;
-}
-@media screen and (min-width: 768px) {
-  .comments-form__avatar {
-    width: 48px;
-    height: 48px;
-  }
-}
-.comments-form__avatar-image {
-  display: inline;
-  margin: 0 auto;
-  margin-left: -14%;
-  height: 108%;
-  margin-top: -1px;
-  width: auto;
-}
 .comments-form__fields {
   display: flex;
   flex-direction: column;
@@ -591,39 +570,56 @@ hr {
     margin: 0 16rem;
   }
 }
-.comment__avatar {
-  width: 36px;
-  height: 36px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-  margin-top: 24px;
-  background-color: #e1e1e1;
-}
-@media screen and (min-width: 768px) {
-  .comment__avatar {
-    width: 48px;
-    height: 48px;
-  }
-}
-.comment__avatar-image {
-  display: inline;
-  margin: 0 auto;
-  margin-left: -14%;
-  height: 108%;
-  margin-top: -1px;
-  width: auto;
-}
 .comment__content {
   width: 85%;
-  margin-left: 16px;
-}
-.comment__date {
-  color: #afafaf;
-  font-family: "Avenir Regular", sans-serif;
-  font-size: 0.8rem;
+  margin-left: 1rem;
 }
 .comment__header {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .comment__author {
+    font-size: 0.9rem;
+  }
+}
+.comment__date {
+  color: #afafaf;
+  font-family: "Avenir Regular", sans-serif;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .comment__date {
+    font-size: 0.9rem;
+  }
+}
+
+.avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+  .avatar {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.avatar--comment-form {
+  margin-top: 1.5rem;
+}
+.avatar__image {
+  display: inline;
+  margin: 0 auto;
+  margin-left: -14%;
+  height: 108%;
+  margin-top: -0.0625rem;
+  width: auto;
+}
+
+.divider:last-child {
+  margin-bottom: 0;
 }/*# sourceMappingURL=bio.css.map */

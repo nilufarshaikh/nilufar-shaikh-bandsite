@@ -177,30 +177,6 @@
     margin: 0 16rem;
   }
 
-  &__avatar {
-    width: 36px;
-    height: 36px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-top: 24px;
-    background-color: $secondary-color-2;
-
-    @include tablet {
-      width: 48px;
-      height: 48px;
-    }
-  }
-
-  &__avatar-image {
-    display: inline;
-    margin: 0 auto;
-    margin-left: -14%;
-    height: 108%;
-    margin-top: -1px;
-    width: auto;
-  }
-
   &__fields {
     display: flex;
     flex-direction: column;
@@ -230,43 +206,62 @@
     margin: 0 16rem;
   }
 
-  &__avatar {
-    width: 36px;
-    height: 36px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-top: 24px;
-    background-color: $secondary-color-2;
-
-    @include tablet {
-      width: 48px;
-      height: 48px;
-    }
-  }
-
-  &__avatar-image {
-    display: inline;
-    margin: 0 auto;
-    margin-left: -14%;
-    height: 108%;
-    margin-top: -1px;
-    width: auto;
-  }
-
   &__content {
     width: 85%;
-    margin-left: 16px;
-  }
-
-  &__date {
-    color: $primary-color-2;
-    font-family: $font-regular;
-    font-size: 0.8rem;
+    margin-left: 1rem;
   }
 
   &__header {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__author {
+    @include tablet {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__date {
+    color: $primary-color-2;
+    font-family: $font-regular;
+    font-weight: 400;
+
+    @include tablet {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: $secondary-color-2;
+
+  @include tablet {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &--comment-form {
+    margin-top: 1.5rem;
+  }
+
+  &__image {
+    display: inline;
+    margin: 0 auto;
+    margin-left: -14%;
+    height: 108%;
+    margin-top: -0.0625rem;
+    width: auto;
+  }
+}
+
+.divider {
+  &:last-child {
+    margin-bottom: 0;
   }
 }

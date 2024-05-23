@@ -60,21 +60,21 @@ a {
 }
 
 button {
-  height: 40px;
+  height: 2.5rem;
   width: 100%;
   background-color: $primary-color-1;
   color: $primary-color-3;
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   font-family: $font-demi;
   cursor: pointer;
 
   @include tablet {
-    width: 150px;
-    padding: 0 32px;
-    font-size: 13px;
+    width: 9.375rem;
+    padding: 0 2rem;
+    font-size: 0.8125rem;
   }
 
   &:hover {
@@ -84,28 +84,29 @@ button {
 
 label {
   color: $primary-color-2;
-  font-size: 10px;
-  line-height: 20px;
-  margin-bottom: 4px;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  margin-bottom: 0.25rem;
 
   @include tablet {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
 }
 
 input,
 textarea {
   background-color: $secondary-color-3;
-  // min-height: 36px;
-  margin-bottom: 16px;
-  padding: 12px;
-  border-radius: 4px;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
   border: 1px solid $secondary-color-2;
   outline: none;
+  resize: none;
 
   @include tablet {
-    padding: 16px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   &::placeholder {
@@ -124,11 +125,11 @@ hr {
   border-top: 1px solid $secondary-color-2;
 
   @include tablet {
-    margin: 1rem 3.75rem;
+    margin: 1.5rem 3.75rem;
   }
 
   @include desktop {
-    margin: 1rem 16rem;
+    margin: 1.5rem 16rem;
   }
 }
 
