@@ -147,7 +147,7 @@
       </section>
       <section class="section comments">
         <h2 class="comments__title">Join the Conversation</h2>
-        <form class="comments-form" id="addCommentForm">
+        <div class="comments-form-box">
           <div class="avatar avatar--comment-form">
             <img
               src="./assets/images/Mohan-muruge.jpg"
@@ -155,7 +155,7 @@
               class="avatar__image"
             />
           </div>
-          <div class="comments-form__fields">
+          <form class="comments-form" id="addCommentForm">
             <div class="comments-form__field">
               <label for="name" class="comments-form__label">NAME</label>
               <input
@@ -175,51 +175,10 @@
               ></textarea>
             </div>
             <button class="comments-form__button">COMMENT</button>
-          </div>
-        </form>
-        <section class="comment-box">
-          <hr />
-          <article class="comment">
-            <!-- 
-            -- TO BE POPULATED DYNAMICALLY
-            -->
-            <div class="avatar">
-              <img
-                src="./assets/images/Mohan-muruge.jpg"
-                alt="user-avatar"
-                class="avatar__image"
-              />
-            </div>
-            <div class="comment__content">
-              <div class="comment__header">
-                <h3 class="comment__author">Victor Pinto</h3>
-                <h3 class="comment__date">11/02/2023</h3>
-              </div>
-              <p class="comment__body">
-                This is art. This is inexplicable magic expressed in the purest
-                way, everything that makes up this majestic work deserves
-                reverence. Let us appreciate this for what it is and what it
-                contains.
-              </p>
-            </div>
-          </article>
-          <hr class="divider" />
-          <article class="comment">
-            <div class="avatar"></div>
-            <div class="comment__content">
-              <div class="comment__header">
-                <h3 class="comment__author">Christina Cabrera</h3>
-                <h3 class="comment__date">10/28/2023</h3>
-              </div>
-              <p class="comment__body">
-                I feel blessed to have seen them in person. What a show! They
-                were just perfection. If there was one day of my life I could
-                relive, this would be it. What an incredible day.
-              </p>
-            </div>
-          </article>
-          <hr class="divider" />
-        </section>
+          </form>
+        </div>
+        <hr />
+        <section class="comment-box"></section>
       </section>
     </main>
     <footer class="section footer">

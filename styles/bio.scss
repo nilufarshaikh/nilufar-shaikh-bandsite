@@ -125,7 +125,7 @@
   }
 }
 
-.comments-form {
+.comments-form-box {
   display: flex;
   gap: 1rem;
 
@@ -136,13 +136,13 @@
   @include desktop {
     margin: 0 16rem;
   }
+}
 
-  &__fields {
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-    flex-grow: 1;
-  }
+.comments-form {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  flex-grow: 1;
 
   &__field {
     display: flex;
