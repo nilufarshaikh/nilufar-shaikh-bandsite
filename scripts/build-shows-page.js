@@ -14,6 +14,21 @@ const showsList = [
     venue: "View Lounge",
     location: "San Francisco, CA",
   },
+  {
+    date: "Sat Nov 16 2024",
+    venue: "Hyatt Agency",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Fri Nov 29 2024",
+    venue: "Moscow Center",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Wed Dec 18 2024",
+    venue: "Press Club",
+    location: "San Francisco, CA",
+  },
 ];
 
 const showsListEl = document.querySelector(".shows__list");
@@ -94,10 +109,14 @@ function createShowsLayout(show) {
   const showRowElFour = document.createElement("div");
   showRowElFour.classList.add("show__row");
 
+  const buttonLinkOne = document.createElement("a");
+  buttonLinkOne.classList.add("show__button");
+  buttonLinkOne.textContent = "BUY TICKETS";
+
   const buttonOne = document.createElement("button");
   buttonOne.classList.add("button");
   buttonOne.classList.add("button--buy-tickets");
-  buttonOne.textContent = "BUY TICKETS";
+  buttonOne.appendChild(buttonLinkOne);
   showRowElFour.appendChild(buttonOne);
 
   showElTwo.appendChild(showRowElOne);

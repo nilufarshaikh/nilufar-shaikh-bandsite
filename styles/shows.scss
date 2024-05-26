@@ -46,6 +46,12 @@
       margin: 0.3rem 1rem 1rem 1rem;
     }
   }
+
+  &__divider:last-child {
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .show {
@@ -88,5 +94,9 @@
   &__value {
     padding-bottom: 1rem;
     font-size: 0.85rem;
+  }
+
+  &__button {
+    font-family: $font-demi;
   }
 }

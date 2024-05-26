@@ -87,7 +87,7 @@ button {
 label,
 h5 {
   color: $primary-color-2;
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   line-height: 1.25rem;
   margin-bottom: 0.25rem;
 
@@ -241,11 +241,38 @@ hr {
     &:hover {
       @include navigation_style(0.2188rem, $primary-color-3, $primary-color-3);
     }
+
+    &--shows {
+      @include desktop {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+      }
+    }
   }
 }
 
 .hero {
   position: relative;
+
+  &__overlay {
+    width: 100%;
+    height: 58vw;
+    background-color: $overlay-color;
+    position: absolute;
+    z-index: 1;
+
+    &--shows {
+      height: 85vw;
+
+      @include tablet {
+        height: 65vw;
+      }
+
+      @include desktop {
+        height: 50vw;
+      }
+    }
+  }
 
   &__wrapper {
     width: 100%;
@@ -264,23 +291,26 @@ hr {
 
     &--shows {
       background-image: url("../assets/images/hero-shows.jpg");
-      height: 82vw;
+      height: 85vw;
       flex-direction: column;
       justify-content: center;
       align-items: start;
+
+      @include tablet {
+        height: 65vw;
+      }
+
+      @include desktop {
+        height: 50vw;
+        background-position: 50% 32%;
+        flex-direction: row;
+        align-items: center;
+      }
     }
   }
 
-  &__overlay {
-    width: 100%;
-    height: 58vw;
-    background-color: $overlay-color;
-    position: absolute;
-    z-index: 1;
-
-    &--shows {
-      height: 82vw;
-    }
+  &__headings {
+    width: 80%;
   }
 
   &__title {
@@ -297,22 +327,35 @@ hr {
     @include desktop {
       padding: 1rem 8rem;
     }
+
+    &--shows {
+      @include tablet {
+        width: 83%;
+      }
+
+      @include desktop {
+        width: 65%;
+      }
+    }
   }
 
   &__subtitle {
     font-size: 14px;
     position: relative;
-    padding: 0.5rem 1rem;
+    padding: 1.5rem 1rem 0.5rem 1rem;
     z-index: 2;
     font-weight: 400;
     color: $primary-color-3;
 
     @include tablet {
       padding-left: 2.25rem;
+      font-size: 24px;
+      font-family: "Avenir Demi";
     }
 
     @include desktop {
       padding-left: 8rem;
+      padding-top: 0;
     }
   }
 
@@ -322,11 +365,15 @@ hr {
     z-index: 2;
 
     @include tablet {
-      padding-left: 2.25rem;
+      padding: 1rem 1rem 0rem 2.25rem;
     }
 
     @include desktop {
-      padding-left: 8rem;
+      padding: 2rem 8rem 0 0;
+      padding-left: 0;
+      padding-top: 2rem;
+      padding-right: 8rem;
+      padding-bottom: 0;
     }
   }
 
@@ -337,6 +384,11 @@ hr {
     @include tablet {
       width: 53vw;
       height: 10rem;
+      max-width: 26.25rem;
+    }
+
+    @include desktop {
+      width: 63vw;
     }
   }
 }

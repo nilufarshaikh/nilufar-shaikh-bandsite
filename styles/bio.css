@@ -106,7 +106,7 @@ button:hover {
 label,
 h5 {
   color: #afafaf;
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
   line-height: 1.25rem;
   margin-bottom: 0.25rem;
 }
@@ -275,9 +275,35 @@ hr {
   border-bottom: 0.2188rem solid #ffffff;
   color: #ffffff;
 }
+@media screen and (min-width: 1280px) {
+  .nav__link--shows {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
 
 .hero {
   position: relative;
+}
+.hero__overlay {
+  width: 100%;
+  height: 58vw;
+  background-color: rgba(50, 50, 50, 0.5);
+  position: absolute;
+  z-index: 1;
+}
+.hero__overlay--shows {
+  height: 85vw;
+}
+@media screen and (min-width: 768px) {
+  .hero__overlay--shows {
+    height: 65vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__overlay--shows {
+    height: 50vw;
+  }
 }
 .hero__wrapper {
   width: 100%;
@@ -295,20 +321,26 @@ hr {
 }
 .hero__wrapper--shows {
   background-image: url("../assets/images/hero-shows.jpg");
-  height: 82vw;
+  height: 85vw;
   flex-direction: column;
   justify-content: center;
   align-items: start;
 }
-.hero__overlay {
-  width: 100%;
-  height: 58vw;
-  background-color: rgba(50, 50, 50, 0.5);
-  position: absolute;
-  z-index: 1;
+@media screen and (min-width: 768px) {
+  .hero__wrapper--shows {
+    height: 65vw;
+  }
 }
-.hero__overlay--shows {
-  height: 82vw;
+@media screen and (min-width: 1280px) {
+  .hero__wrapper--shows {
+    height: 50vw;
+    background-position: 50% 32%;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.hero__headings {
+  width: 80%;
 }
 .hero__title {
   position: relative;
@@ -327,10 +359,20 @@ hr {
     padding: 1rem 8rem;
   }
 }
+@media screen and (min-width: 768px) {
+  .hero__title--shows {
+    width: 83%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title--shows {
+    width: 65%;
+  }
+}
 .hero__subtitle {
   font-size: 14px;
   position: relative;
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 1rem 0.5rem 1rem;
   z-index: 2;
   font-weight: 400;
   color: #ffffff;
@@ -338,11 +380,14 @@ hr {
 @media screen and (min-width: 768px) {
   .hero__subtitle {
     padding-left: 2.25rem;
+    font-size: 24px;
+    font-family: "Avenir Demi";
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__subtitle {
     padding-left: 8rem;
+    padding-top: 0;
   }
 }
 .hero__media {
@@ -352,12 +397,16 @@ hr {
 }
 @media screen and (min-width: 768px) {
   .hero__media {
-    padding-left: 2.25rem;
+    padding: 1rem 1rem 0rem 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .hero__media {
-    padding-left: 8rem;
+    padding: 2rem 8rem 0 0;
+    padding-left: 0;
+    padding-top: 2rem;
+    padding-right: 8rem;
+    padding-bottom: 0;
   }
 }
 .hero__iframe {
@@ -368,6 +417,12 @@ hr {
   .hero__iframe {
     width: 53vw;
     height: 10rem;
+    max-width: 26.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__iframe {
+    width: 63vw;
   }
 }
 
