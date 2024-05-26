@@ -108,6 +108,7 @@ function createShowsLayout(show) {
 
   const showRowElFour = document.createElement("div");
   showRowElFour.classList.add("show__row");
+  showRowElFour.classList.add("show__row--btn");
 
   const buttonLinkOne = document.createElement("a");
   buttonLinkOne.classList.add("show__button");

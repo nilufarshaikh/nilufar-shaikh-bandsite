@@ -89,6 +89,12 @@
     @include tablet {
       flex: 1 1 25%;
     }
+
+    &--btn {
+      @include desktop {
+        text-align: center;
+      }
+    }
   }
 
   &__value {

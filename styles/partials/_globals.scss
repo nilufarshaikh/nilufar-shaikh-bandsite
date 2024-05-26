@@ -32,7 +32,7 @@ h2 {
 
 h3 {
   font-family: $font-demi;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   line-height: 1.375rem;
 
   @include tablet {
@@ -42,7 +42,7 @@ h3 {
 }
 
 p {
-  font-size: 0.73rem;
+  font-size: 0.8125rem;
   line-height: 1.125rem;
 
   @include tablet {
@@ -72,7 +72,7 @@ button {
   cursor: pointer;
 
   @include tablet {
-    min-width: 9.375rem;
+    width: 9.375rem;
     max-height: 40px;
     padding: 10px 32px;
     font-size: 0.8125rem;
@@ -90,6 +90,7 @@ h5 {
   font-size: 0.6875rem;
   line-height: 1.25rem;
   margin-bottom: 0.25rem;
+  font-family: $font-demi;
 
   @include tablet {
     font-size: 0.75rem;
@@ -261,6 +262,12 @@ hr {
     position: absolute;
     z-index: 1;
 
+    &--biography {
+      @include desktop {
+        height: 50vw;
+      }
+    }
+
     &--shows {
       height: 85vw;
 
@@ -287,6 +294,12 @@ hr {
 
     &--biography {
       background-image: url("../assets/images/hero-bio.jpg");
+      background-position: 50% 85%;
+
+      @include desktop {
+        height: 50vw;
+        background-position: 50% 30%;
+      }
     }
 
     &--shows {

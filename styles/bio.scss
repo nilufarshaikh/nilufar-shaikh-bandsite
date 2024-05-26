@@ -38,12 +38,8 @@
     padding-bottom: 1rem;
 
     @include tablet {
-      margin-top: -12%;
-      padding-bottom: 1.5rem;
-    }
-
-    @include desktop {
       margin-top: -10%;
+      padding-bottom: 1.5rem;
     }
   }
 
@@ -60,7 +56,7 @@
 
   &__author {
     padding: 0.5rem 0 1rem 0;
-    font-size: 0.78rem;
+    font-size: 0.85rem;
 
     @include tablet {
       padding: 0.5rem 0 2rem 0;
@@ -169,6 +165,7 @@
   &__content {
     width: 85%;
     margin-left: 1rem;
+    flex: 1;
   }
 
   &__header {
@@ -177,7 +174,10 @@
   }
 
   &__author {
+    padding-bottom: 0.5rem;
+
     @include tablet {
+      padding-bottom: 0;
       font-size: 0.9rem;
     }
   }
@@ -204,6 +204,7 @@
   @include tablet {
     width: 3rem;
     height: 3rem;
+    margin-top: 0.3rem;
   }
 
   &--comment-form {
