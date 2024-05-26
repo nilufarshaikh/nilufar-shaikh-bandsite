@@ -31,7 +31,7 @@ const showsList = [
   },
 ];
 
-function toggleShowItem(event) {
+const toggleShowItem = (event) => {
   const selectedShowEl = document.querySelector(".show--selected");
   const clickedShowEl = event.target.closest(".show");
 
@@ -40,20 +40,21 @@ function toggleShowItem(event) {
   }
 
   clickedShowEl.classList.add("show--selected");
-}
+};
 
 const showsListEl = document.querySelector(".shows__list");
 
-function createExtraHeaderLayout() {
+const createExtraHeaderLayout = () => {
   const showElOne = document.createElement("article");
   showElOne.classList.add("show");
-  showElOne.classList.add("show--big-screen");
+  showElOne.classList.add("show--extra");
 
   const showRowEl1 = document.createElement("div");
   showRowEl1.classList.add("show__row");
 
   const headingElOne = document.createElement("h5");
   headingElOne.classList.add("show__header");
+  headingElOne.classList.add("show__header--extra");
   headingElOne.textContent = "DATE";
 
   showRowEl1.appendChild(headingElOne);
@@ -63,6 +64,7 @@ function createExtraHeaderLayout() {
 
   const headingElTwo = document.createElement("h5");
   headingElTwo.classList.add("show__header");
+  headingElTwo.classList.add("show__header--extra");
   headingElTwo.textContent = "VENUE";
 
   showRowEl2.appendChild(headingElTwo);
@@ -72,6 +74,7 @@ function createExtraHeaderLayout() {
 
   const headingElThree = document.createElement("h5");
   headingElThree.classList.add("show__header");
+  headingElThree.classList.add("show__header--extra");
   headingElThree.textContent = "LOCATION";
 
   showRowEl3.appendChild(headingElThree);
@@ -81,6 +84,7 @@ function createExtraHeaderLayout() {
 
   const headingElFour = document.createElement("h5");
   headingElFour.classList.add("show__header");
+  headingElFour.classList.add("show__header--extra");
   headingElFour.textContent = "";
 
   showRowEl4.appendChild(headingElFour);
@@ -90,9 +94,9 @@ function createExtraHeaderLayout() {
   showElOne.appendChild(showRowEl3);
   showElOne.appendChild(showRowEl4);
   showsListEl.appendChild(showElOne);
-}
+};
 
-function createShowsLayout(show) {
+const createShowsLayout = (show) => {
   const showEl = document.createElement("article");
   showEl.classList.add("show");
   showEl.addEventListener("click", toggleShowItem);
@@ -146,6 +150,7 @@ function createShowsLayout(show) {
 
   const buttonLinkOne = document.createElement("a");
   buttonLinkOne.classList.add("show__button");
+  buttonLinkOne.setAttribute("href", "#");
   buttonLinkOne.textContent = "BUY TICKETS";
 
   const buttonOne = document.createElement("button");
@@ -165,9 +170,9 @@ function createShowsLayout(show) {
   showsDivider.classList.add("shows__divider");
 
   showsListEl.appendChild(showsDivider);
-}
+};
 
-function renderAllShows(allShows) {
+const renderAllShows = (allShows) => {
   showsListEl.innerHTML = "";
 
   createExtraHeaderLayout();
@@ -175,6 +180,6 @@ function renderAllShows(allShows) {
   allShows.forEach((show) => {
     createShowsLayout(show);
   });
-}
+};
 
 renderAllShows(showsList);

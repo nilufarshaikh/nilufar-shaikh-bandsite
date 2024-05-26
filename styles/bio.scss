@@ -119,18 +119,18 @@
   &__title {
     @include page_titles($primary-color-1);
   }
-}
 
-.comments-form-box {
-  display: flex;
-  gap: 1rem;
+  &__wrapper {
+    display: flex;
+    gap: 1rem;
 
-  @include tablet {
-    margin: 0 3.75rem;
-  }
+    @include tablet {
+      margin: 0 3.75rem;
+    }
 
-  @include desktop {
-    margin: 0 16rem;
+    @include desktop {
+      margin: 0 16rem;
+    }
   }
 }
 
@@ -212,12 +212,8 @@
   }
 
   &__image {
-    display: inline;
-    margin: 0 auto;
-    margin-left: -14%;
-    height: 108%;
-    margin-top: -0.0625rem;
     width: auto;
+    height: 108%;
   }
 }
 

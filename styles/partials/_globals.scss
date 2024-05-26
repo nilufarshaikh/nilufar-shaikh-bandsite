@@ -64,17 +64,17 @@ button {
   width: 100%;
   background-color: $primary-color-1;
   color: $primary-color-3;
+  font-family: $font-demi;
   font-size: 0.8125rem;
   line-height: 1.25rem;
+  border-radius: 4px;
   border: none;
-  border-radius: 0.25rem;
-  font-family: $font-demi;
   cursor: pointer;
 
   @include tablet {
     width: 9.375rem;
-    max-height: 40px;
-    padding: 10px 32px;
+    max-height: 2.5rem;
+    padding: 0.625rem 2rem;
     font-size: 0.8125rem;
     box-sizing: border-box;
   }
@@ -87,10 +87,10 @@ button {
 label,
 h5 {
   color: $primary-color-2;
+  font-family: $font-demi;
   font-size: 0.6875rem;
   line-height: 1.25rem;
   margin-bottom: 0.25rem;
-  font-family: $font-demi;
 
   @include tablet {
     font-size: 0.75rem;
@@ -101,16 +101,16 @@ h5 {
 input,
 textarea {
   background-color: $secondary-color-3;
+  border: 1px solid $secondary-color-2;
+  border-radius: 4px;
   margin-bottom: 1rem;
   padding: 0.75rem;
-  border-radius: 0.25rem;
-  border: 1px solid $secondary-color-2;
   outline: none;
   resize: none;
 
   @include tablet {
-    padding: 1rem;
     margin-bottom: 1.5rem;
+    padding: 1rem;
   }
 
   &::placeholder {
@@ -257,39 +257,21 @@ hr {
 
   &__overlay {
     width: 100%;
-    height: 58vw;
+    height: 100%;
     background-color: $overlay-color;
     position: absolute;
     z-index: 1;
-
-    &--biography {
-      @include desktop {
-        height: 50vw;
-      }
-    }
-
-    &--shows {
-      height: 85vw;
-
-      @include tablet {
-        height: 65vw;
-      }
-
-      @include desktop {
-        height: 50vw;
-      }
-    }
   }
 
   &__wrapper {
     width: 100%;
     height: 58vw;
-    display: flex;
-    justify-content: normal;
-    align-items: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
+    display: flex;
+    justify-content: normal;
+    align-items: center;
     z-index: 0;
 
     &--biography {
@@ -327,14 +309,14 @@ hr {
   }
 
   &__title {
+    padding: 0.5rem 1rem;
     position: relative;
     z-index: 2;
-    padding: 0.5rem 1rem;
     color: $primary-color-3;
 
     @include tablet {
-      padding: 1rem 2.25rem;
       width: 79%;
+      padding: 1rem 2.25rem;
     }
 
     @include desktop {
@@ -353,40 +335,36 @@ hr {
   }
 
   &__subtitle {
-    font-size: 14px;
-    position: relative;
     padding: 1.5rem 1rem 0.5rem 1rem;
+    position: relative;
     z-index: 2;
-    font-weight: 400;
     color: $primary-color-3;
+    font-size: 0.875rem;
+    font-weight: 400;
 
     @include tablet {
       padding-left: 2.25rem;
-      font-size: 24px;
-      font-family: "Avenir Demi";
+      font-size: 1.5rem;
+      font-family: $font-demi;
     }
 
     @include desktop {
-      padding-left: 8rem;
       padding-top: 0;
+      padding-left: 8rem;
     }
   }
 
   &__media {
-    position: relative;
     padding: 0rem 1rem;
+    position: relative;
     z-index: 2;
 
     @include tablet {
-      padding: 1rem 1rem 0rem 2.25rem;
+      padding: 1rem 1rem 0 2.25rem;
     }
 
     @include desktop {
       padding: 2rem 8rem 0 0;
-      padding-left: 0;
-      padding-top: 2rem;
-      padding-right: 8rem;
-      padding-bottom: 0;
     }
   }
 

@@ -6,16 +6,6 @@
   padding-left: 0;
   padding-right: 0;
 
-  &__list > *:nth-child(1) .show__header {
-    @include tablet {
-      display: block;
-    }
-
-    @include desktop {
-      padding-bottom: 1rem;
-    }
-  }
-
   @include desktop {
     padding-left: 8rem;
     padding-right: 5.75rem;
@@ -86,10 +76,22 @@
   &__header {
     @include tablet {
       display: none;
+      flex: 1 1 25%;
+      padding-left: 1rem;
+    }
+
+    &--extra {
+      @include tablet {
+        display: block;
+      }
+
+      @include desktop {
+        padding-bottom: 1rem;
+      }
     }
   }
 
-  &--big-screen {
+  &--extra {
     display: none;
     background: none;
 
@@ -103,13 +105,6 @@
 
     @include tablet {
       display: flex;
-    }
-  }
-
-  &__header {
-    @include tablet {
-      flex: 1 1 25%;
-      padding-left: 1rem;
     }
   }
 
@@ -147,6 +142,7 @@
 
   &__button {
     font-family: $font-demi;
+    color: $primary-color-3;
   }
 }
 

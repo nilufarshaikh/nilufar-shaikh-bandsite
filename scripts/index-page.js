@@ -21,7 +21,7 @@ const commentsList = [
 
 const commentBoxEl = document.querySelector(".comment-box");
 
-function displayComment(comment) {
+const createCommentLayout = (comment) => {
   const commentEl = document.createElement("article");
   commentEl.classList.add("comment");
 
@@ -57,15 +57,15 @@ function displayComment(comment) {
   commentEl.appendChild(commentContentEl);
   commentBoxEl.appendChild(commentEl);
   commentBoxEl.appendChild(dividerEl);
-}
+};
 
-function renderAllComments(allComments) {
+const renderAllComments = (allComments) => {
   commentBoxEl.innerHTML = "";
 
   allComments.forEach((comment) => {
-    displayComment(comment);
+    createCommentLayout(comment);
   });
-}
+};
 
 renderAllComments(commentsList);
 
