@@ -526,7 +526,11 @@ hr {
 @media screen and (min-width: 768px) {
   .shows__list > *:nth-child(1) .show__header {
     display: block;
-    padding-bottom: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__list > *:nth-child(1) .show__header {
+    padding-bottom: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -565,9 +569,12 @@ hr {
   flex: 1;
 }
 @media screen and (min-width: 768px) {
-  .shows__divider {
-    margin: 0.3rem 1rem 1rem 1rem;
+  .shows__list {
+    padding: 0 1.25rem;
   }
+}
+.shows__divider {
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   .shows__divider:last-child {
@@ -579,21 +586,28 @@ hr {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.show:hover {
+  background-color: #fafafa;
+}
 @media screen and (min-width: 768px) {
   .show {
+    padding-left: 0;
+    padding-right: 0;
     display: flex;
     align-items: baseline;
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .show__header {
     display: none;
   }
 }
 .show--big-screen {
   display: none;
+  background: none;
+}
+.show--big-screen:hover {
+  background: none;
 }
 @media screen and (min-width: 768px) {
   .show--big-screen {
@@ -603,22 +617,46 @@ hr {
 @media screen and (min-width: 768px) {
   .show__header {
     flex: 1 1 25%;
+    padding-left: 1rem;
   }
 }
 @media screen and (min-width: 768px) {
   .show__row {
-    flex: 1 1 25%;
+    flex: 1 0 25%;
   }
 }
-@media screen and (min-width: 1280px) {
+.show__row--btn {
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
   .show__row--btn {
-    text-align: center;
+    text-align: end;
+    padding-top: 1rem;
+  }
+}
+.show__row--top {
+  padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .show__row--top {
+    padding-top: 0;
   }
 }
 .show__value {
   padding-bottom: 1rem;
   font-size: 0.85rem;
 }
+@media screen and (min-width: 768px) {
+  .show__value {
+    padding: 0 0px 1rem 1rem;
+  }
+}
 .show__button {
   font-family: "Avenir Demi", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    margin-right: 1rem;
+  }
 }/*# sourceMappingURL=shows.css.map */

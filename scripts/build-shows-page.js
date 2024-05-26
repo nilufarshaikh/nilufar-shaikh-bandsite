@@ -33,39 +33,62 @@ const showsList = [
 
 const showsListEl = document.querySelector(".shows__list");
 
-function createShowsLayout(show) {
+function createExtraHeaderLayout() {
   const showElOne = document.createElement("article");
   showElOne.classList.add("show");
   showElOne.classList.add("show--big-screen");
+
+  const showRowEl1 = document.createElement("div");
+  showRowEl1.classList.add("show__row");
 
   const headingElOne = document.createElement("h5");
   headingElOne.classList.add("show__header");
   headingElOne.textContent = "DATE";
 
+  showRowEl1.appendChild(headingElOne);
+
+  const showRowEl2 = document.createElement("div");
+  showRowEl2.classList.add("show__row");
+
   const headingElTwo = document.createElement("h5");
   headingElTwo.classList.add("show__header");
   headingElTwo.textContent = "VENUE";
+
+  showRowEl2.appendChild(headingElTwo);
+
+  const showRowEl3 = document.createElement("div");
+  showRowEl3.classList.add("show__row");
 
   const headingElThree = document.createElement("h5");
   headingElThree.classList.add("show__header");
   headingElThree.textContent = "LOCATION";
 
+  showRowEl3.appendChild(headingElThree);
+
+  const showRowEl4 = document.createElement("div");
+  showRowEl4.classList.add("show__row");
+
   const headingElFour = document.createElement("h5");
   headingElFour.classList.add("show__header");
   headingElFour.textContent = "";
 
-  showElOne.appendChild(headingElOne);
-  showElOne.appendChild(headingElTwo);
-  showElOne.appendChild(headingElThree);
-  showElOne.appendChild(headingElFour);
+  showRowEl4.appendChild(headingElFour);
 
+  showElOne.appendChild(showRowEl1);
+  showElOne.appendChild(showRowEl2);
+  showElOne.appendChild(showRowEl3);
+  showElOne.appendChild(showRowEl4);
+  console.log(showElOne);
   showsListEl.appendChild(showElOne);
+}
 
+function createShowsLayout(show) {
   const showElTwo = document.createElement("article");
   showElTwo.classList.add("show");
 
   const showRowElOne = document.createElement("div");
   showRowElOne.classList.add("show__row");
+  showRowElOne.classList.add("show__row--top");
 
   const showHeaderElOne = document.createElement("h5");
   showHeaderElOne.classList.add("show__header");
@@ -135,6 +158,8 @@ function createShowsLayout(show) {
 
 function renderAllShows(allShows) {
   showsListEl.innerHTML = "";
+
+  createExtraHeaderLayout();
 
   allShows.forEach((show) => {
     createShowsLayout(show);

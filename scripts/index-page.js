@@ -61,6 +61,7 @@ function displayComment(comment) {
 
 function renderAllComments(allComments) {
   commentBoxEl.innerHTML = "";
+
   allComments.forEach((comment) => {
     displayComment(comment);
   });
@@ -80,9 +81,9 @@ addCommentForm.addEventListener("submit", (event) => {
     month: "2-digit",
     day: "2-digit",
   });
-
   const nameInput = document.querySelector(".comments-form__input--name");
   const textInput = document.querySelector(".comments-form__input--comment");
+
   let hasError = false;
 
   if (commentName.length === 0) {
