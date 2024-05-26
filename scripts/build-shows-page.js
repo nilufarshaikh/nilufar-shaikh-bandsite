@@ -31,6 +31,17 @@ const showsList = [
   },
 ];
 
+function toggleShowItem(event) {
+  const selectedShowEl = document.querySelector(".show--selected");
+  const clickedShowEl = event.target.closest(".show");
+
+  if (selectedShowEl && clickedShowEl !== selectedShowEl) {
+    selectedShowEl.classList.remove("show--selected");
+  }
+
+  clickedShowEl.classList.add("show--selected");
+}
+
 const showsListEl = document.querySelector(".shows__list");
 
 function createExtraHeaderLayout() {
@@ -78,13 +89,13 @@ function createExtraHeaderLayout() {
   showElOne.appendChild(showRowEl2);
   showElOne.appendChild(showRowEl3);
   showElOne.appendChild(showRowEl4);
-  console.log(showElOne);
   showsListEl.appendChild(showElOne);
 }
 
 function createShowsLayout(show) {
-  const showElTwo = document.createElement("article");
-  showElTwo.classList.add("show");
+  const showEl = document.createElement("article");
+  showEl.classList.add("show");
+  showEl.addEventListener("click", toggleShowItem);
 
   const showRowElOne = document.createElement("div");
   showRowElOne.classList.add("show__row");
@@ -140,15 +151,15 @@ function createShowsLayout(show) {
   const buttonOne = document.createElement("button");
   buttonOne.classList.add("button");
   buttonOne.classList.add("button--buy-tickets");
+
   buttonOne.appendChild(buttonLinkOne);
   showRowElFour.appendChild(buttonOne);
 
-  showElTwo.appendChild(showRowElOne);
-  showElTwo.appendChild(showRowElTwo);
-  showElTwo.appendChild(showRowElThree);
-  showElTwo.appendChild(showRowElFour);
-
-  showsListEl.appendChild(showElTwo);
+  showEl.appendChild(showRowElOne);
+  showEl.appendChild(showRowElTwo);
+  showEl.appendChild(showRowElThree);
+  showEl.appendChild(showRowElFour);
+  showsListEl.appendChild(showEl);
 
   const showsDivider = document.createElement("hr");
   showsDivider.classList.add("shows__divider");

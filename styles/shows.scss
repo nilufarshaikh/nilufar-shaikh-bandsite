@@ -62,9 +62,18 @@
 .show {
   padding-left: 1rem;
   padding-right: 1rem;
+  cursor: pointer;
 
   &:hover {
     background-color: $secondary-color-3;
+  }
+
+  &--selected {
+    background-color: $secondary-color-2;
+  }
+
+  &--selected:hover {
+    background-color: $secondary-color-2;
   }
 
   @include tablet {
@@ -85,6 +94,10 @@
     background: none;
 
     &:hover {
+      background: none;
+    }
+
+    &--selected {
       background: none;
     }
 
