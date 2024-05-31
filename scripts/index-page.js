@@ -1,5 +1,3 @@
-import BandSiteApi from "./band-site-api.js";
-
 const API_KEY = "421b5fd9-4528-42d7-a52b-1946075ad7f2";
 const bandSiteAPI = new BandSiteApi(API_KEY);
 
