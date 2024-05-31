@@ -1,35 +1,7 @@
-const showsList = [
-  {
-    date: "Mon Sept 09 2024",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 17 2024",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Oct 12 2024",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 16 2024",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 29 2024",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 18 2024",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
+import BandSiteApi from "./band-site-api.js";
+
+const API_KEY = "421b5fd9-4528-42d7-a52b-1946075ad7f2";
+const bandSiteAPI = new BandSiteApi(API_KEY);
 
 const toggleShowItem = (event) => {
   const selectedShowEl = document.querySelector(".show--selected");
@@ -111,7 +83,9 @@ const createShowsLayout = (show) => {
 
   const showValueElOne = document.createElement("h3");
   showValueElOne.classList.add("show__value");
-  showValueElOne.textContent = show.date;
+
+  const date = new Date(show.date).toDateString();
+  showValueElOne.textContent = date;
 
   showRowElOne.appendChild(showHeaderElOne);
   showRowElOne.appendChild(showValueElOne);
@@ -125,7 +99,7 @@ const createShowsLayout = (show) => {
 
   const showValueElTwo = document.createElement("p");
   showValueElTwo.classList.add("show__value");
-  showValueElTwo.textContent = show.venue;
+  showValueElTwo.textContent = show.place;
 
   showRowElTwo.appendChild(showHeaderElTwo);
   showRowElTwo.appendChild(showValueElTwo);
@@ -148,17 +122,17 @@ const createShowsLayout = (show) => {
   showRowElFour.classList.add("show__row");
   showRowElFour.classList.add("show__row--btn");
 
-  const buttonLinkOne = document.createElement("a");
-  buttonLinkOne.classList.add("show__button");
-  buttonLinkOne.setAttribute("href", "#");
-  buttonLinkOne.textContent = "BUY TICKETS";
-
   const buttonOne = document.createElement("button");
   buttonOne.classList.add("button");
   buttonOne.classList.add("button--buy-tickets");
+  buttonOne.textContent = "BUY TICKETS";
 
-  buttonOne.appendChild(buttonLinkOne);
-  showRowElFour.appendChild(buttonOne);
+  const buttonLinkOne = document.createElement("a");
+  buttonLinkOne.classList.add("show__button");
+  buttonLinkOne.setAttribute("href", "#");
+
+  buttonLinkOne.appendChild(buttonOne);
+  showRowElFour.appendChild(buttonLinkOne);
 
   showEl.appendChild(showRowElOne);
   showEl.appendChild(showRowElTwo);
@@ -182,4 +156,9 @@ const renderAllShows = (allShows) => {
   });
 };
 
-renderAllShows(showsList);
+const getShowsResponse = async () => {
+  const showsList = await bandSiteAPI.getShows();
+  renderAllShows(showsList);
+};
+
+getShowsResponse();

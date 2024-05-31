@@ -143,11 +143,7 @@
   &__button {
     font-family: $font-demi;
     color: $primary-color-3;
-  }
-}
-
-.button {
-  @include tablet {
     margin-right: 1rem;
+    padding: 0.8rem 0;
   }
 }
