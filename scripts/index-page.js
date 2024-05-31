@@ -1,5 +1,9 @@
+import BandSiteApi from "./band-site-api.js";
+
 const API_KEY = "421b5fd9-4528-42d7-a52b-1946075ad7f2";
 const bandSiteAPI = new BandSiteApi(API_KEY);
+
+const comments = await bandSiteAPI.getComments();
 
 const commentBoxEl = document.querySelector(".comment-box");
 
@@ -55,16 +59,11 @@ const renderAllComments = (allComments) => {
   });
 };
 
-const loadComments = async () => {
-  const comments = await bandSiteAPI.getComments();
-  renderAllComments(comments);
-};
-
-loadComments();
+renderAllComments(comments);
 
 const addCommentForm = document.getElementById("addCommentForm");
 
-addCommentForm.addEventListener("submit", (event) => {
+addCommentForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const commentName = event.target.name.value;
@@ -92,23 +91,15 @@ addCommentForm.addEventListener("submit", (event) => {
     return;
   }
 
-  const postComment = async () => {
-    const comment = {
-      name: commentName,
-      comment: commentText,
-    };
-
-    await bandSiteAPI.postComment(comment);
-
-    const loadAllComments = async () => {
-      const commentsList = await bandSiteAPI.getComments();
-      renderAllComments(commentsList);
-    };
-
-    loadAllComments();
+  const comment = {
+    name: commentName,
+    comment: commentText,
   };
 
-  postComment();
+  await bandSiteAPI.postComment(comment);
+
+  const commentsList = await bandSiteAPI.getComments();
+  renderAllComments(commentsList);
 
   addCommentForm.reset();
 });
